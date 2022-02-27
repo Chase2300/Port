@@ -1,0 +1,50 @@
+.select_gaz{
+
+    & h3{
+    @include blue_background_h;
+    }
+
+    &__buttons{
+        text-align: center;
+        padding-bottom: 40px;
+        & button{
+            border-radius: 20px;
+            padding: 10px 0;
+            min-width: 170px;
+        }
+
+        & button + button{
+            margin-left: 24px;
+        }
+
+        & span{
+            font-size: 18px;
+        }
+
+    }
+
+    &__order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 64px;
+
+        &__btn{
+            @include order_btn;
+            min-width: 355px;
+        }
+    }
+}
+
+.select{
+    background-color: #2194FF;
+    cursor: pointer;
+    
+    & span{
+        color: #f1f1f1;
+    }
+}
+.unselect{
+    background: rgba(241, 241, 241, 0.2);
+    cursor: pointer;
+}

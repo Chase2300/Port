@@ -1,0 +1,177 @@
+.reviews-head{
+    text-align: center;
+
+    & h3{
+        @include h_white_style;
+        padding: 40px 0;
+    }
+}
+
+.reviews{
+    & h3{
+        @include h_white_style;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    &__position{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-relative{
+            position: relative;
+            width: 800px;
+            min-height: 350px;
+            background-image: url(../img/main_img/reviews_img/Rectangle\ 15.png), ;
+            background-repeat: no-repeat;
+
+            &__conf{
+                display: flex;
+                justify-content: space-around;
+                min-height: 350px;
+                align-items: center;
+
+                &__photo-text{
+                    display: flex;
+
+                & div {                   
+                    max-width: 440px;
+                    padding-left: 25px;
+                    }
+
+                & p:nth-child(1){
+                    color: #2194FF;
+                    font-size: 24px;
+                    padding: 5px 0;   
+                }
+
+                & p:nth-child(2){
+                    color: #2D2D2D;
+                    font-size: 18px;
+                    padding: 5px 0;   
+                }
+
+                & p:nth-child(3){
+                    @include p_white_background;
+                    padding-top: 15px;  
+                }
+                }
+            }
+        }
+    }
+
+    &__slider{
+        text-align: center;
+        padding: 24px 0 40px 0;
+
+       & button{
+        min-width: 60px;
+        min-height: 20px;
+        border-radius: 20px;
+        background: rgba(241, 241, 241, 0.2);
+    }
+    } 
+}
+
+// слайдер
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+}
+/* Стрелка */
+.slick-arrow{
+    cursor: pointer;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+    font-size: 0;
+    background: url(../img/main_img/reviews_img/Group\ 3.svg) 0 0 / 100% no-repeat;
+    width: 49px;
+    height: 74px;
+    padding-left: 44px;
+    left: 0;
+    border: 0;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+    font-size: 0;
+    background: url(../img/main_img/reviews_img/Group\ 2.svg) 0 0 / 100% no-repeat;
+    width: 49px;
+    height: 74px;
+    padding-right: 44px;
+    right: 0;
+    border: 0;
+}
+
+.slider{
+    max-width: 1140px;
+    margin: 0 auto;
+    /* display: flex; */
+    align-items: center;
+    position: relative;
+
+    &-item{
+        display: flex;
+        justify-content: center;
+
+        &__p{
+            padding-left: 25px;
+            max-width: 440px;
+        }
+        &__p p:nth-child(1){
+            font-size: 26px;
+            font-weight: 700px;
+            color: #2194FF;
+            padding-top: 4px;
+        }
+        &__p p:nth-child(2){
+            color: #f1f1f1;
+            font-weight: 500px;
+            font-size: 20px;
+            padding: 4px 0;
+        }
+        &__p p:nth-child(3){
+            color: #f1f1f1;
+            font-size: 16px;
+        }
+    }
+}
+
+.slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-top: -60px;
+
+}
+
+.slider .slick-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.slider .slick-dots li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+.slider .slick-dots li.slick-active button{
+    background-color: #2194FF;
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;    
+    cursor: pointer;
+}
+

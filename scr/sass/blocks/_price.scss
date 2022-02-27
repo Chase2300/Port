@@ -1,0 +1,88 @@
+.main_background_container{
+    background-color: #2194ff21;
+}
+.calc_price{
+    position: relative;
+
+    &__title{
+        @include blue_background_h;
+    }
+
+    &__arrowDown_container{
+        &__position_1, &__position_2, &__position_3{
+            position: absolute;
+        }
+        &__position_1{
+            left:47.3%;
+            bottom: 0%;
+        }
+        &__position_2{
+            left:46.2%;
+            bottom: -3%;
+        }
+        &__position_3{
+            left: 45%;
+            bottom: -6%;
+        }
+    }
+
+    &__position{
+        display: flex;
+        padding-bottom: 20px;
+
+        &__percent-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__title{
+            @include h_white_style;
+        }
+
+        &__p-title{
+            font-size: 24px;
+            color:#2194FF;
+        }
+
+        &__p-text{
+            @include Open_Sans_plusColor();
+            padding: 25px 0;
+        }
+
+        &__btn{
+            border-radius: 50px;
+            background: #2194FF;
+            padding: 10px 35px;
+            font-size: 18px;
+            font-weight: 700px;
+            transition: 1s;
+            @include Open_Sans_plusColor;
+            @include btn_hover;
+        }
+
+        &__percent{
+            font-size: 36px;
+        }
+
+        &__p-center, &__center-title{
+            color: #F1F1F1;
+            font-size: 18px;
+            text-align: center;
+            opacity: 0.7;
+        }
+       
+        &__p-center:nth-child(odd){
+            padding-right: 10px;
+        }
+        &__p-center:nth-child(even){
+            padding-left: 10px;
+            border-left: 1px solid white;
+        }
+
+        &__center-title{
+            padding-bottom: 15px;
+        }
+    }
+}
+
+

@@ -1,0 +1,60 @@
+
+.benefits_details{
+    &__h-style{
+        @include h_white_style;
+        text-align: center;
+        padding: 55px 0 25px 0;
+    }
+
+    &__inside-position{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        padding-bottom: 40px;
+    
+        & section{
+            width: 359px;
+            padding: 20px 0;
+        }
+
+        & h4{
+            @include benefits_details_h;
+            padding: 10px 0;
+        }
+
+        & p{
+            @include Open_Sans_plusColor;
+        }
+    }
+
+    &__guarantee{
+        background-image: url(../img/main_img/benefits_details_img/transp_10.png);
+        background-repeat: no-repeat;
+        position: relative;
+        max-width: 100%;
+        min-height: 284px;
+
+        &__text{
+            max-width: 680px;
+            position: absolute;
+            font-size: 33px;
+            color: #f1f1f1;
+            left: 50%;
+
+            & span{
+                color: #2194FF;
+            }
+
+            & button{
+                background: #2194FF;
+                padding: 10px;
+                font-size: 14px;
+                font-weight: 800px;
+                transition: 1s;
+                @include Open_Sans_plusColor;
+                @include btn_hover;
+            }
+        }
+    }
+}

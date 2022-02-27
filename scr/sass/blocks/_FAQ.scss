@@ -1,0 +1,37 @@
+.FAQ{
+
+    & h3{
+        @include blue_background_h;
+    }
+
+    &__container-details{        
+        padding-bottom: 40px;
+
+        &__conf{
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    
+        &__conf:hover{
+            cursor: pointer;
+        }
+    
+        &__conf summary{
+            list-style-image: url(../img/main_img/faq_img/Arrow_down.svg);
+            padding: 15px 0;
+            font-size: 16px;
+            color: #F1F1F1
+        }
+    
+        &__conf[open] > summary{
+            list-style-image: url(../img/main_img/faq_img/Arrow_top.svg);
+            color: #2194FF;
+        }
+    
+        &__conf[open] > p{
+            @include Open_Sans_plusColor;
+            padding: 0 0 10px 23px;
+        }
+    }
+
+}
