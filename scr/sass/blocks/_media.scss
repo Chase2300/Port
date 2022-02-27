@@ -1,0 +1,354 @@
+@media (max-width: 1140px) {
+    .header{
+        background-size: 47%;
+        background-position: right;
+    }
+
+    //main
+    .FAQ{
+        margin: 0 10px;
+    }
+
+    .calc_price__position{
+        padding: 0 10px;
+    }
+    
+    //footer
+    .ask{
+        &__flex{
+            justify-content: center;
+
+            &__question{
+                padding-left: 10px;
+            }
+        }
+
+        &__free-inst__place{
+            flex-direction: column;
+            text-align: center;
+
+            &__map{
+                display: none;
+    
+                &__for375{
+                    display: block;
+                    align-self: center;
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+@media (min-width: 375px) and (max-width:800px) {
+    // header
+    .header{
+        background-image: none;
+
+        .feedback-not768{
+            display: none;
+        }
+
+        .feedback-yes768{
+            display: block;
+        }
+
+        .feedback{
+            max-width: inherit;
+            padding: 0;
+        }
+
+        .question{
+            padding: 10px 0;
+        }
+
+        .logo, .benefits, .benefits__for_media768{
+            justify-content: center;
+        }
+
+        .logo{
+            &__a{
+                padding-right: 10px;
+            }
+            &__text{
+                padding-left: 10px;
+            }
+        }
+
+        .benefits__for_media768{
+            display: flex;
+        }        
+    }
+
+    // main
+    .calc_price{
+        padding-bottom: 40px;
+
+        &__position{
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+
+            & section:nth-child(2){
+                padding: 40px 0;
+            }
+        }
+
+        & img{
+            display: none;
+        }
+    }
+
+    .benefits_details{
+
+        &__h-style{
+            padding: 25px 0;
+        }
+
+        &__inside-position{
+            justify-content: space-around;
+            padding-bottom: 20px;
+        }
+        &__inside-position section{
+            width: 384px;
+        }
+
+        &__guarantee{
+            background-image: none;            
+            min-height: 176px;
+
+            &__text{
+                position: initial;
+                max-width: inherit;
+                text-align: center;
+                font-size: 24px;
+                padding: 0 10px;
+
+                & button{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .select_gaz{
+
+        & button{
+            width: 300px;
+        }
+
+        & button + button {
+            margin-left: 0;
+        }
+
+        &__order img{
+            width: 375px;
+        }
+    }
+
+    .slider{
+
+        & .slick-arrow{
+            display: none !important;
+        }
+
+        & .slick-dots button{
+            width: 40px;
+            height: 40px;
+        }
+        
+        & .slick-dots li{
+            margin: 0 20px;
+        }
+
+        &-item img{
+            max-width: 200px;
+            max-height: 250px;
+        }
+
+        &-item__p p:nth-child(1){
+            font-size: 19px;
+        }
+        &-item__p p:nth-child(2){
+            font-size: 19px;
+        }
+        &-item__p p:nth-child(3){
+            font-size: 15px;
+        }
+    }
+
+
+    .reviews__position{
+        background-image: none;
+
+        &-relative__conf{
+            background-color: #f1f1f1;
+
+            &__photo-text{
+                flex-direction: column;
+                text-align: center;
+
+                & img{
+                    width: 100px;
+                    align-self: center;
+                }
+
+                & div{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .FAQ{
+        
+        &__container-details{
+            padding-bottom: 0;
+        }
+    }
+
+    //footer
+    .ask{
+
+        &__flex{
+            justify-content: center;
+
+            &__question{
+                padding: 0 10px;
+                text-align: center;
+
+                &__form{
+                    max-width: inherit;
+
+                    & input {
+                        min-width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__flex__manager{
+            display: none;
+        }
+
+        
+        &__partners{
+            flex-wrap: wrap;
+            justify-content: center;
+
+            & div:first-child{
+                margin-left: 16px;
+            }
+        }
+
+        &__free-inst__header{
+            padding: 23px 0;
+
+            & button{
+                margin: 20px 0 10px 0;
+            }
+        }
+
+        &__free-inst__place{
+            border-radius: 0;
+        }
+
+        &__free-inst__accept a {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+    //modal 
+    .popup, .popup-question{
+       
+        .popup_content, .popup-question_content{
+            width: 36rem;
+            top: 15%;
+        }
+
+        .popup_close{
+            color: black;
+            right: 4.5rem;
+            top: 0.8rem;
+        }
+    }
+}
+
+// for benefits position and img
+@media (min-width:800px) and (max-width:1076px) {
+    .benefits_details{
+
+        &__inside-position{
+            justify-content: space-around;
+        }
+        &__inside-position section{
+            width: 384px;
+        }
+
+        &__guarantee{
+            background-size: 63%;
+
+            &__text h3{
+                font-size: 35px;
+            }
+        }
+    }
+
+    .select_gaz__order img{
+        width: 500px;
+    }
+
+    .calc_price__position section:nth-child(2) img{
+        width: 500px;
+    }
+
+    .ask{
+
+        &__flex__manager{
+
+            &__background{
+                right:44%;
+            }
+
+        }
+    }
+}
+
+// for 375-425 mobile popup
+@media (min-width:375px) and (max-width:425px){
+    .popup, .popup-question{
+       
+        .popup_content, .popup-question_content{
+            width: 23rem;
+            top: 15%;
+        }
+
+        .popup_close{
+            color: black;
+            right: 1rem;
+            top: 0.8rem;
+        }
+
+        .form{
+            padding: 2rem 1rem;
+
+            &_input {
+                height: 3rem;
+                margin-bottom: 12px;
+                min-width: inherit;
+            }
+
+            &_notice:not(:last-child){
+                padding-bottom: 12px;
+            }
+        }
+
+        .button{
+            font-size: 14px;
+        }
+    }
+}

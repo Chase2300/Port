@@ -1,0 +1,94 @@
+.header{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-image: url(../img/header_img/header_background.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 61%;
+    background-position-y: 200px;
+}
+.logo{
+    display: flex;
+    padding: 25px 0;
+    &__text{
+        margin: auto 0;
+        padding-left: 20px;
+        border-left: 1px solid white;
+        max-width: 158px;
+        color:#2194FF;
+        font-family: "Open Sans";
+        font-weight: 400;
+    }
+    &__a{
+        padding-right: 20px;
+    }
+}
+
+.benefits{
+    display: flex;
+    padding-bottom: 12px;
+
+    & div + div{
+        padding-left: 30px;
+    }
+    &__p{
+        @include Open_Sans_plusColor();
+        font-weight: 300;
+        ;
+    }
+    &__arrow{
+        margin: 2px auto;
+    }
+}
+
+.delivery{
+    & h1{
+        font-size: 64px;
+        max-width: 534px;
+        color: #2194FF;
+    }
+    &__point{
+        font-size: 24px;
+        color: #F1F1F1;
+        max-width: 300px;
+        padding: 18px 0 40px 0;
+    }
+    &__p-price{
+        @include Open_Sans_plusColor();
+        font-size: 16px;
+        padding-top: 12px;
+    }
+    &__arrow{
+        transform: rotate(10.63deg);
+        position: absolute;
+    }
+    &__big-button{
+        @include order_btn;
+    }
+    &__p-price{
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 16px;
+        padding: 16px 0 70px 20px;
+    }
+}
+
+.tel{
+    text-decoration: none;
+    color: #F1F1F1;
+}
+.question{
+    color: #2194FF;
+    padding: 20px 0;
+}
+.feedback{
+    padding: 30px 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+.feedback-yes768{
+    display: none;
+}
