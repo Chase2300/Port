@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body, header, main, footer {
+    max-width: 797px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.back_gray{
+    background: #F5F5F5;
+
+    &__comments{
+        background: #F5F5F5;
+        margin: 11px 0 0 53px;
+        padding: 10px 0 10px 10px;
+    }
+}
