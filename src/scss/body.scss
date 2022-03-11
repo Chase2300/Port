@@ -1,0 +1,132 @@
+@mixin body-background-style-left-img {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+.page-break{
+    page-break-inside: avoid !important;  
+    
+}
+.main{   
+
+    &_item{
+        display: flex;
+        padding-top: 25px;
+
+        /* &__back-img-"color" - стили для изменения цвета фона картинки, которая отвечает за проверяемый блок у машины*/
+        &__back-img-red{
+            background-color: #FF0000;
+            @include body-background-style-left-img;
+        }
+
+        &__back-img-yellow{
+            background-color: #FFD700;
+            @include body-background-style-left-img;
+        }
+        
+        &__back-img-green{
+            background-color: #0FA958;
+            @include body-background-style-left-img;
+        }   
+
+        &__detail{
+            align-items: baseline;
+
+            &__p-size{
+                font-size: 12px;
+            }
+
+            &__img{
+                padding-right: 48px;
+            }
+
+            & span{
+                padding-left: 5px;
+            }
+
+            &__ok-or-not{
+                display: flex;
+
+                &__name p{
+                    padding-bottom: 10px;
+                    font-size: 12px;
+                    min-width: 114px;           
+                }
+
+                &__icons{
+                    text-align: center;
+
+                    &__2 svg+svg{
+                        margin-left: 31px;
+                    }
+                }
+            }   
+
+            &__hr{
+                width: 81%;
+                position: relative;
+                left: -9%;
+            }
+        }
+
+        .left{
+            padding-left: 10px;
+        }
+
+        &__check{
+            max-width: 35%;
+            margin-right: 20px;
+            min-width: 35%;
+
+            & h3{
+                font-size: 16px;
+                color: #282828;
+            }
+
+            & ul, li{
+                font-size: 12px;
+                list-style-type: none;
+                color: #606060;
+            }
+
+            & ul{
+                padding: 0;
+            }
+            & li{                                                
+                padding-bottom: 10px;
+            }
+
+            & li:first-child{
+                padding-top: 10px;
+            }
+
+            & li::before{
+                content: "\1F784";
+                font-size: 15px;
+                color: #282828; 
+                padding-right: 5px;
+            }
+        }
+
+         /* &__result-"color" - стили для изменения цвета текста результата(замена, обслуживание)*/
+        &__result-red{
+            color: #FF0000;            
+        }
+
+        &__result-orange{
+            color: #F7862A;            
+        }
+    }
+
+    &-comments{
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+
+        & p{
+            padding-left: 10px;
+        }
+    }
+}
+

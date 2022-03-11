@@ -1,0 +1,48 @@
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    &_tel{
+        text-decoration: none;
+    }
+
+    & a,p{
+        color: #606060;       
+    }
+
+    & div{
+        text-align: end;
+    }
+}
+
+.act h3{
+    text-align: center;
+    padding: 18px 0;
+}
+
+.characteristic_auto{
+    display: flex;
+    justify-content: center;
+    min-height: 41px;
+
+    & p {
+        padding: 15px 0 3px 0;
+    }
+    & p:not(:last-child){
+        padding-right: 40px;
+    }
+
+    & span{
+        color: #0FA958;
+    }
+
+    & svg{
+        vertical-align: text-top;
+    }
+}
+
+.hr-bottom{
+    padding-top: 25px;
+    border-bottom: 2px solid #C0C0C0;
+}
