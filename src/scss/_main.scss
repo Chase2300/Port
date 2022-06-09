@@ -1,0 +1,51 @@
+.main {
+    color: white;
+
+    &__item {
+        background: rgb(52, 52, 180);
+        text-align: center;
+        padding: 35px;
+    }
+
+
+}
+
+.animate {
+    transform: rotateX(180deg);
+    transition: 1.5s;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.statusBar {
+    max-width: 500px;
+    margin: 0 auto;
+
+    &__height {
+        max-height: 100px;
+        overflow-y: scroll;
+
+        &__statusText {
+            min-height: 100px;
+            background-color: #3434b4;
+            padding: 10px;
+            color: white;
+        }
+    }
+
+    &__button {
+        text-align: center;     
+    }
+    &__style {
+        background: #3434b4;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+    }
+}
