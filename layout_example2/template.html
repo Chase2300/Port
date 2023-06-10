@@ -1,0 +1,181 @@
+<section data-bs-version="5.1" class="features2" group="Features">
+    <app-parameters>
+        <!-- Block parameters controls (Blue "Gear" panel) -->
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Icon" name="showIcon" checked>
+        <input type="color" title="Icon 1 Color" name="iconColor1" value="#012b3a" selected condition="showIcon">
+        <input type="color" title="Icon 2 Color" name="iconColor2" value="#34a0a4" selected condition="showIcon">
+        <input type="color" title="Icon 3 Color" name="iconColor3" value="#75dbcd" selected condition="showIcon">
+        <input type="color" title="Icon 4 Color" name="iconColor4" value="#ba8e8a" selected condition="showIcon">
+        <header>Background</header>
+        <fieldset type="background" name="bg">
+            <input type="image" title="Image" value="../_images/background3.jpg">
+            <input type="color" title="Color" value="#3d626c" selected>
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.2"
+               condition="overlay && bg.type !== 'color'">
+    </app-parameters>
+
+    <div class="app-overlay" app-if="overlay && bg.type!== 'color'"
+         app-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div app-class="{
+        'app-fullscreen': fullScreen}">
+        <div app-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+            <div class="content d-flex justify-content-center row">
+                <div class="section-head align-left col-12 col-md-6 col-lg-3">
+                    <div class="iconfont-wrapper" app-if="showIcon">
+                        <span app-icon class="app-iconfont icon1 mobi-appi-smile-face mobi-appi"></span>
+                    </div>
+                    <h3 class="app-section-title mb-md-4 app-fonts-style" app-theme-style="display-7">Naming</h3>
+                    <p class="app-text app-fonts-style mb-4" app-theme-style="display-4" data-app-selector=".app-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Vel facilisis
+                        volutpat est velit egestas. Tincidunt nunc pulvinar sapien et ligula ullamcorper.</p>
+                </div>
+                <div class="section-head align-left col-12 col-md-6 col-lg-3">
+                    <div class="iconfont-wrapper" app-if="showIcon">
+                        <span app-icon class="app-iconfont icon2 mobi-appi-sites mobi-appi"></span>
+                    </div>
+                    <h3 class="app-section-title mb-md-4 app-fonts-style" app-theme-style="display-7">Design</h3>
+                    <p class="app-text app-fonts-style mb-4" app-theme-style="display-4" data-app-selector=".app-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Vel facilisis
+                        volutpat est velit egestas. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Urna
+                        condimentum mattis pellentesque
+                        id nibh tortor id aliquet.</p>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                               data-bs-toggle="collapse" data-core href="#collapse1" aria-expanded="false"
+                               aria-controls="collapse1">
+                                <h6 class="panel-title-edit app-fonts-style" app-theme-style="display-4"
+                                    data-app-selector=".panel-title-edit">
+                                    <span app-icon class="app-iconfont mobi-appi-arrow-next mobi-appi"></span>What's
+                                    included
+                                </h6>
+                            </a>
+                        </div>
+                        <div id="collapse1" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul class="app-fonts-style panel-text" app-theme-style="display-4"
+                                    data-app-selector=".panel-text">
+                                    <li>
+                                        <p>Lorem ipsum dolor sit amet</p>
+                                    </li>
+                                    <li>
+                                        <p>Consectetur adipiscing elit</p>
+                                    </li>
+                                    <li>
+                                        <p>Sed do eiusmod tempor</p>
+                                    </li>
+                                    <li>
+                                        <p>Incididunt ut labore et dolore magna aliqua</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bootstrap-toggle"
+                     class="toggle-panel accordionStyles tab-content col-12 col-md-6 col-lg-3 padd">
+                    <div class="iconfont-wrapper" app-if="showIcon">
+                        <span app-icon class="app-iconfont icon3 mobi-appi-like mobi-appi"></span>
+                    </div>
+                    <h3 class="app-section-title mb-md-4 app-fonts-style" app-theme-style="display-7">Brand Story</h3>
+                    <p class="app-text app-fonts-style mb-4" app-theme-style="display-4" data-app-selector=".app-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Vel facilisis
+                        volutpat est velit egestas.</p>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                               data-bs-toggle="collapse" data-core href="#collapse2" aria-expanded="false"
+                               aria-controls="collapse1">
+                                <h6 class="panel-title-edit app-fonts-style" app-theme-style="display-4"
+                                    data-app-selector=".panel-title-edit">
+                                    <span app-icon class="app-iconfont mobi-appi-arrow-next mobi-appi"></span>What's
+                                    included</h6>
+                            </a>
+                        </div>
+                        <div id="collapse2" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul class="app-fonts-style panel-text" app-theme-style="display-4"
+                                    data-app-selector=".panel-text">
+                                    <li>
+                                        <p>Lorem ipsum dolor sit amet</p>
+                                    </li>
+                                    <li>
+                                        <p>Consectetur adipiscing elit</p>
+                                    </li>
+                                    <li>
+                                        <p>Sed do eiusmod tempor</p>
+                                    </li>
+                                    <li>
+                                        <p>Incididunt ut labore et dolore magna aliqua</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bootstrap-toggle" class="toggle-panel accordionStyles tab-content col-12 col-md-6 col-lg-3">
+                    <div class="iconfont-wrapper" app-if="showIcon">
+                        <span app-icon class="app-iconfont mobi-appi-features mobi-appi icon4"></span>
+                    </div>
+                    <h3 class="app-section-title mb-md-4 app-fonts-style" app-theme-style="display-7">Visual Branding
+                    </h3>
+                    <p class="app-text app-fonts-style mb-4" app-theme-style="display-4" data-app-selector=".app-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                        Vel facilisis volutpat est velit egestas. Tincidunt nunc pulvinar sapien et ligula ullamcorper.
+                        Urna
+                        condimentum mattis pellentesque
+                        id nibh tortor id aliquet.&nbsp;</p>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                               data-bs-toggle="collapse" data-core href="#collapse3" aria-expanded="false"
+                               aria-controls="collapse1">
+                                <h6 class="panel-title-edit app-fonts-style" app-theme-style="display-4"
+                                    data-app-selector=".panel-title-edit">
+                                    <span app-icon class="app-iconfont mobi-appi-arrow-next mobi-appi"></span>What's
+                                    included
+                                </h6>
+                            </a>
+                        </div>
+                        <div id="collapse3" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul class="app-fonts-style panel-text" app-theme-style="display-4"
+                                    data-app-selector=".panel-text">
+                                    <li>
+                                        <p>Lorem ipsum dolor sit amet</p>
+                                    </li>
+                                    <li>
+                                        <p>Consectetur adipiscing elit</p>
+                                    </li>
+                                    <li>
+                                        <p>Sed do eiusmod tempor</p>
+                                    </li>
+                                    <li>
+                                        <p>Incididunt ut labore et dolore magna aliqua</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

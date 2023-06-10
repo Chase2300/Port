@@ -1,0 +1,118 @@
+<section data-bs-version="5.1" class="features1" group="Features">
+    <app-parameters>
+        <input type="id" name="sliderId">
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="7"
+               condition="fullScreen == false">
+        <header>Show/Hide</header>
+        <input type="image" name="card1bg" title="Card 1 Bg" value="../_images/image2.jpg">
+        <input type="image" name="card2bg" title="Card 2 Bg" value="../_images/image3.jpg">
+        <input type="image" name="card3bg" title="Card 3 Bg" value="../_images/image6.jpg">
+        <input type="image" name="card4bg" title="Card 4 Bg" value="../_images/image7.jpg">
+        <input type="image" name="card5bg" title="Card 5 Bg" value="../_images/image4.jpg">
+        <input type="checkbox" title="Subtitle" name="showSubtitle" checked>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Figure" name="showF" checked="">
+        <input type="color" name="fig4" title="Color 1" value="#e5be8a" condition="showF">
+        <input type="color" name="fig3" title="Color 2" value="#a13935" condition="showF">
+        <input type="checkbox" title="Card Title" name="showCardTitle" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg">
+            <input type="color" title="Color" value="#3d626c" selected>
+            <input type="image" title="Image" value="../_images/background3.jpg">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#f2f2f2"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7"
+               condition="overlay && bg.type !== 'color'">
+    </app-parameters>
+
+    <div class="app-overlay" app-if="overlay && bg.type!== 'color'"
+         app-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div app-class="{
+        'app-fullscreen': fullScreen}">
+        <div app-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+            <div class="app-overlay" app-if="overlaySlide"
+                 app-style="{'opacity': overlaySlideOpacity, 'background-color': overlaySlideColor}">
+            </div>
+            <div class="row">
+                <h5 class="app-section-subtitle app-fonts-style" app-theme-style="display-4"
+                    data-app-selector=".app-section-subtitle" app-if="showSubtitle">OUR RESEARCH</h5>
+                <h5 class="app-section-title app-fonts-style" app-theme-style="display-2"
+                    data-app-selector=".app-section-title" app-if="showTitle">Our Latest&nbsp;<a href="index.html"
+                       class="text-danger">Research</a></h5>
+            </div>
+            <div class="columns">
+                <div class="card big">
+                    <div class="card-wrapper">
+                        <div class="card-img card1">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title align-center app-white app-fonts-style" app-theme-style="display-5"
+                                app-if="showCardTitle" data-app-selector=".card-title">Top 12 Things Website Should Have
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card sm">
+                    <div class="card-wrapper">
+                        <div class="card-img card2">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title align-center app-white app-fonts-style" app-theme-style="display-4"
+                                app-if="showCardTitle" data-app-selector=".card-title">
+                                Design and Marketing</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card sm">
+                    <div class="card-wrapper">
+                        <div class="card-img card3">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title align-center app-white app-fonts-style" app-theme-style="display-4"
+                                app-if="showCardTitle" data-app-selector=".card-title">Web Development</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card sm">
+                    <div class="card-wrapper">
+                        <div class="card-img card4">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title align-center app-white app-fonts-style" app-theme-style="display-4"
+                                app-if="showCardTitle" data-app-selector=".card-title">Top 18 Branding Lifehacks</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card sm">
+                    <div class="card-wrapper">
+                        <div class="card-img card5">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title align-center app-white app-fonts-style" app-theme-style="display-4"
+                                app-if="showCardTitle" data-app-selector=".card-title">Top Digital Marketing Agency</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1077.35 1080" class="svg2" app-if="showF">
+            <g id="Layer_3" data-name="Layer 3">
+                <path class="cls-1"
+                      d="M538.18,1080C240.48,1080-.88,838.69-1,541H1077.35C1077.25,838.69,835.9,1080,538.18,1080Z">
+                </path>
+                <path class="cls-2"
+                      d="M1077.35,541H-1v-.18C-1,243.06,240.41,1.68,538.18,1.68s539.17,241.38,539.17,539.15Z"></path>
+            </g>
+        </svg>
+    </div>
+    
+</section>
