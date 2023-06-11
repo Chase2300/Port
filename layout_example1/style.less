@@ -1,0 +1,221 @@
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 1rem);
+  padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+  background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+  background-image: url(@bg-value);
+}
+
+.item-wrapper {
+  width: 100%;
+}
+
+.left-side {
+  text-align: left;
+}
+
+.row {
+  align-items: center;
+  justify-content: center;
+}
+
+.card-box {
+  background-color: #012B3A5E;
+  z-index: 3;
+  position: relative;
+  margin: auto;
+  opacity: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.card-img {
+  border-radius: 0;
+}
+
+.row-center {
+  height: 100%;
+}
+
+svg {
+  z-index: 10;
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  cursor: pointer;
+  overflow: inherit;
+  transition: all 1s;
+
+  &:hover,
+  &:focus-within {
+    .card-box {
+      opacity: 1;
+    }
+
+    &:before {
+      opacity: 0.6;
+    }
+  }
+}
+
+.card-title {
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
+  font-family: 'Montagu Slab';
+}
+
+.g {
+  grid-row-gap: 32px;
+}
+
+.app-section-subtitle {
+  letter-spacing: 5.4px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.app-section-title {
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: left;
+}
+
+a {
+  font-weight: 400;
+}
+
+.columns {
+  grid-template-columns: 50% 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  min-height: 467px;
+  grid-column-gap: 14px;
+  grid-row-gap: 14px;
+  justify-content: stretch;
+  display: grid;
+}
+
+.big {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 467px;
+}
+
+.sm,
+.card-box {
+  height: 225px;
+}
+
+.card11 {
+  height: 467px;
+}
+
+.big .card-box {
+  height: 467px;
+}
+
+.card1 {
+  background-image: url(@card1bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card2 {
+  background-image: url(@card2bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card3 {
+  background-image: url(@card3bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card4 {
+  background-image: url(@card4bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card5 {
+  background-image: url(@card5bg);
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  position: relative;
+}
+
+svg {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  padding-left: 15px;
+  bottom: -7%;
+  transform: rotate(6deg);
+}
+
+@media (max-width: 650px) {
+  .columns {
+    display: initial;
+  }
+
+  .big.card-box,
+  .sm.card,
+  .card-box,
+  img {
+    height: 300px;
+  }
+
+  .card {
+    margin-top: 20px;
+  }
+
+  .big {
+    margin-top: 0;
+  }
+}
+
+.cls-1 {
+  fill: @fig3;
+}
+
+.cls-2 {
+  fill: @fig4;
+}
+
+@media (max-width: 1000px) {
+  svg {
+    bottom: -55px;
+    width: 200px;
+  }
+}

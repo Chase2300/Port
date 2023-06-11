@@ -1,0 +1,80 @@
+h2 {
+  margin-top: 8px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+.App__settings {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  overflow: auto;
+  background-color: rgba(230, 226, 226, 0.541);
+}
+.App__settings-save-alert {
+  background-color: rgba(64, 154, 238, 0.87);
+}
+.App__settings-dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  margin-bottom: 16px;
+  height: 150px;
+  background-color: rgba(218, 215, 215, 0.541);
+}
+.App__settings-dropzone_text {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.App__settings #form-file-upload {
+  height: 16rem;
+  width: 28rem;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+.App__settings #input-file-upload {
+  display: none;
+}
+.App__settings #label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+.App__settings .form-check {
+  margin-bottom: 8px;
+}
+.App__preview {
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
+  overflow: auto;
+}
+.App__preview-container {
+  align-self: center;
+  margin: 0 20px;
+}
+.App__preview-custom-header {
+  background-color: rgba(216, 213, 213, 0.178);
+}
+.App__preview-custom-header p {
+  padding: 10px 0 10px 30px;
+  margin: 0;
+}
+.App__preview-content {
+  padding: 10px 0 10px 30px;
+  margin: 0;
+}
+.App__preview-content_image img:not(:last-child) {
+  padding-bottom: 10px;
+}

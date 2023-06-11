@@ -1,0 +1,134 @@
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 1rem);
+  padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+  background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+  background-image: url(@bg-value);
+}
+
+.panel-title-edit {
+  color: #ffffff;
+}
+
+.panel-text {
+  color: #f2f2f2;
+  padding-bottom: 16px;
+}
+
+.card-header {
+  padding-left: 0;
+  border: none;
+}
+
+.card {
+  border: none;
+  border-bottom: 2px solid #dcdce0;
+  border-radius: 0;
+}
+
+.card .card-header {
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-iconfont {
+  font-family: 'Moririse2' !important;
+  font-size: 80px;
+  color: #dcdce0;
+}
+
+.app-text {
+  color: #ffffff;
+  margin-bottom: 48px;
+}
+
+.iconfont-wrapper {
+  margin-bottom: 20px;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.t1 {
+  display: flex;
+  align-items: center;
+}
+
+.card .collapsing .panel-body {
+  border-top: transparent !important;
+  border-bottom: 1px solid #ffffff;
+}
+
+.card .show .panel-body {
+  border-bottom: 1px solid #ffffff;
+  border-top: transparent !important;
+}
+
+.panel-title-edit .app-iconfont {
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+H3 {
+  color: #ffffff;
+}
+
+ul {
+  padding-left: 40px;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.panel-text P {
+  color: #ffffff;
+  text-align: left;
+}
+
+.icon1 {
+  color: @iconColor1;
+}
+
+.icon2 {
+  color: @iconColor2;
+}
+
+.icon3 {
+  color: @iconColor3;
+}
+
+.icon4 {
+  color: @iconColor4;
+}
+
+@media (max-width: 992px) {
+  .section-head {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-head {
+    margin-bottom: 40px;
+  }
+
+  .padd {
+    margin-bottom: 40px;
+  }
+}
+
+li p {
+  line-height: 23.4px;
+}
