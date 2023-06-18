@@ -1,0 +1,47 @@
+.task-list {
+    text-align: center;
+  }
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    margin-bottom: 10px;
+  }
+  
+  .task-button {
+    margin-top: 10px;
+  }
+  
+  /* Добавленные отступы */
+  .task-form label,
+  .task-form input,
+  .task-form textarea {
+    margin-bottom: 10px;
+  }
+  
+  .task-item h2 {
+    margin-bottom: 5px;
+  }
+  
+  .task-item p {
+    margin-bottom: 10px;
+  }
+
+  .task-form textarea {
+    min-height: 10vh;
+    min-width:  10vh;
+    max-height: 50vh;
+    max-width: 50vw;
+    overflow: auto;
+  }
+  
