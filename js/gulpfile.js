@@ -110,6 +110,22 @@ gulp.task('updateTime', function () {
         .pipe(dest(jsonObject.dest.replace(/\/?\*\*?\/\*.html/g, "")));
 });
 
+gulp.task('copyWithChanges', function () {
+    return src(jsonObject.paths)
+        .pipe(through2.obj(function (file, enc, callback) {
+            const dom = new JSDOM(file.contents);
+            const document = dom.window.document;
+
+            changeAssets(file, document);
+            checkAiLanguage(file, document);
+
+            file.contents = Buffer.from(dom.serialize());
+            this.push(file)
+            callback()
+        }))
+        .pipe(dest('./u_dest'))
+})
+
 function translateDocument(file) {
     let promiseArr = [];
     try {
@@ -142,5 +158,34 @@ function translateDocument(file) {
     return promiseArr;
 }
 
+function changeAssets(file, document) {
+    const assetPrefix = "assets52";
+    const allAssets = Array.from(document.querySelectorAll(`[href^='${assetPrefix}']`));
+    allAssets.forEach(asset => {
+        const newAssets = asset.getAttribute("href").replace(assetPrefix, "../assets52");
+        asset.setAttribute("href", newAssets);
+    });
+}
+
+function checkAiLanguage(file, document) {
+    let phrases = jsonObject.check_AI_model;
+
+    function removePhrases(node) {
+        if (node.nodeType === 3) {
+            for (let phrase of phrases) {
+                const regex = new RegExp(phrase, 'gi');
+                node.textContent = node.textContent.replace(regex, '');
+            }
+        } else if (node.nodeType === 1) {
+            for (let i = 0; i < node.childNodes.length; i++) {
+                removePhrases(node.childNodes[i]);
+            }
+        }
+    }
+
+    removePhrases(document.body);
+}
+
+gulp.task('default', gulp.series('changeAssets', 'copyWithChanges'));
 gulp.task('rw', gulp.series('updateTime', "ai"));
 
